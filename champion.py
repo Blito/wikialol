@@ -1,0 +1,36 @@
+class Champion:
+    __init__(self, data):
+        stats = data['stats']
+        self.disp_name = data['name']
+        self.ms = stats['movespeed']
+        self.range = stats['attackrange']
+        self.attack_delay = stats['attackspeedoffset']
+        self.as_base = str(Decimal(0.625 / (1 + self.attack_delay)).quantize(Decimal('1.000'))
+        self.dam_base = stats['attackdamage']
+        self.arm_base = stats['armor']
+        self.mr_base = stats['spellblock']
+        self.hp_base = stats['hp']
+        self.mp_base = stats['mp']
+        self.hp5_base = stats['hpregen']
+        self.mp5_base = stats['mpregen']
+        self.as_lvl = stats['attackspeedperlevel']
+        self.dam_lvl = stats['attackdamageperlevel']
+        self.arm_lvl = stats['armorperlevel']
+        self.mr_lvl = stats['spellblockperlevel']
+        self.hp_lvl = stats['hpperlevel']
+        self.mp_lvl = stats['mpperlevel']
+        self.hp5_lvl = stats['hpregenperlevel']
+        self.mp5_lvl = stats['mpregenperlevel']
+        self.image = self.name.translate(None, ". ") + Square.png
+        self.title = data['title']
+        self.herotype = data['tags']
+        self.alttype = alttype
+        self.rangetype = rangetype
+        self.date = date
+        self.patch = patch
+        self.health = health
+        self.attack = attack
+        self.spells = spells
+        self.difficulty = difficulty
+        self.ip = ip
+        self.rp = rp
