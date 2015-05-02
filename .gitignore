@@ -1,6 +1,13 @@
 # API Key file
 key.txt
 
+# Riot API stuff
+apicache/
+throttle.ctrl
+
+# Pywikibot
+pywikibot.lwp
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
